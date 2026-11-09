@@ -1,0 +1,30 @@
+NESTO 1.4 · ACTUALIZACIÓN DE MONTOS CON COMAS
+
+Requiere la versión 1.3 con Supabase ya configurado.
+
+1. Descomprime este ZIP.
+2. En GitHub > Add file > Upload files, arrastra money-format.js y las carpetas
+   finanzas e inversiones completas. Conserva las rutas originales.
+3. Deben actualizarse exactamente estos archivos:
+   money-format.js (nuevo, en la raíz)
+   finanzas/index.html
+   finanzas/metas.html
+   inversiones/index.html
+4. Pulsa Commit changes y espera a que Pages termine.
+5. Abre Nesto y recarga con Ctrl + Shift + R.
+
+No borres otros archivos. No necesitas ejecutar SQL ni cambiar Supabase.
+La conexión, los datos y los usuarios existentes se conservan.
+
+FORMATO
+Montos: 136,000.00. Coma para miles y punto para decimales.
+Se aplica a presupuesto, formularios, ahorros, inversiones, simulador y metas.
+Los separadores se muestran mientras escribes; al salir se añaden dos decimales.
+Los cálculos y los valores almacenados siguen usando números.
+Porcentajes y plazos mantienen sus controles numéricos originales.
+
+VERIFICACIÓN
+Probadas comas, decimales, negativos de ajustes, rechazo de texto inválido,
+cálculo numérico desde campos formateados y visualización en navegador.
+Las pruebas de sincronización y API existentes también pasaron.
+No se modificaron registros reales ni la configuración de Supabase.
