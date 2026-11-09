@@ -1,0 +1,61 @@
+NESTO 1.3 · CONFIGURACIÓN DESDE CERO
+
+PROYECTO SUPABASE
+La conexión incluida apunta a iqhvuujmpprnzzgzcvwm.
+config.js contiene únicamente URL y clave publicable, no claves secretas.
+
+1. CREAR TABLAS
+En Supabase abre el proyecto Nesto > SQL Editor > New query.
+Abre NESTO_SUPABASE.sql en un editor de texto, copia TODO y pulsa Run.
+El resultado final debe mostrar finance_settings, finance_months y
+wealth_accounts, con rls_activo = true en las tres filas.
+El SQL no crea usuarios ni importa datos anteriores.
+
+2. CREAR TU USUARIO
+Authentication > Users > Add user > Create new user.
+Escribe tu correo y una contraseña para entrar en Nesto.
+Confirma el correo mediante el mecanismo que muestre Supabase.
+No necesitas compartir la contraseña con nadie.
+
+3. URL DE LA APLICACIÓN
+Authentication > URL Configuration:
+Site URL: https://edabreu01.github.io/nesto/
+Añade esa misma dirección a Redirect URLs si usarás correos de autenticación.
+El login actual usa correo y contraseña.
+
+4. ACTUALIZAR GITHUB
+Descomprime este ZIP y sube todos los archivos a la raíz de main.
+Conserva las carpetas finanzas e inversiones completas.
+Hay archivos nuevos: config.js, wealth-store.js y cloud-shell.js.
+Reemplaza index.html, exports.js y los HTML de ambas carpetas.
+Pages continúa en main / (root). No subas el ZIP como sustituto de los archivos.
+
+5. COMPROBAR
+Abre https://edabreu01.github.io/nesto/ y recarga con Ctrl+F5.
+Entra con el usuario creado en el paso 2.
+Crea un registro de presupuesto y una cuenta de ahorro de prueba.
+Espera a ver Guardado en la nube en cada área.
+Recarga y verifica que permanezcan. Comprueba también en otro dispositivo.
+
+QUÉ SE GUARDA
+Finanzas e historial mensual: finance_settings y finance_months.
+Metas: campos goals y goals_revision en finance_settings.
+Ahorros, portafolios, inversiones, movimientos y tipo de cambio: wealth_accounts.
+Cada usuario tiene sus propias filas mediante RLS.
+El ahorro presupuestado no se agrega automáticamente al patrimonio.
+
+CONTINUIDAD Y RESPALDOS
+El nuevo proyecto empieza vacío. Usuarios y datos del anterior no se migran solos.
+JSON de finanzas y patrimonio: Exportar / importar.
+Metas: respaldo propio dentro de su sección.
+Los cambios pendientes de patrimonio tienen una copia de recuperación local
+separada por proyecto y usuario. No se mezclan con otros usuarios.
+Ante conflicto entre dispositivos no se sobrescribe el patrimonio de la nube.
+Descarga el respaldo pendiente y pulsa Actualizar nube antes de combinarlo.
+Para datos locales de versiones anteriores, usa su respaldo JSON; no se suben solos.
+
+VERIFICACIÓN REALIZADA
+Sintaxis JavaScript, visualización del acceso, pruebas simuladas de API,
+separación por usuario, conflictos de revisiones y recuperación tras errores.
+No se ha ejecutado el SQL ni creado usuarios en tu proyecto Supabase.
+La verificación autenticada de extremo a extremo sigue pendiente de esos pasos.
