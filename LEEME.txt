@@ -1,0 +1,36 @@
+NESTO · 1.2
+
+Sube todo este contenido a la raíz de GitHub Pages, conservando las carpetas.
+
+ACCESO
+Un único login de Nesto da acceso a vista general, finanzas, patrimonio y metas.
+Las áreas no piden otro login al cambiar entre ellas.
+La sesión se conserva al recargar la pestaña mientras siga vigente.
+Salir cierra el acceso general. No se almacena tu contraseña.
+
+RESPALDOS E INFORMES
+Botón superior: Exportar / importar.
+JSON unificado: historial mensual, conceptos, ahorros, portafolios, inversiones,
+movimientos y tipo de cambio. Las metas tienen su propio respaldo en su sección.
+La importación combina registros; los identificadores existentes se conservan.
+No elimina meses. Valida el archivo y descarga un respaldo de seguridad previo.
+Si el presupuesto no se sincroniza, se informa y patrimonio no se modifica.
+Excel: archivo .xlsx con registros y valores numéricos.
+PDF: abre el diálogo de impresión. Selecciona Guardar como PDF.
+Los informes incluyen todos los meses guardados y los registros de patrimonio.
+
+DATOS
+Finanzas conserva tu configuración de Supabase.
+Patrimonio sigue usando almacenamiento de este navegador; no se sincroniza.
+Un dominio nuevo no puede leer datos locales de la dirección anterior.
+El ahorro mensual planificado no se suma al patrimonio.
+
+VALIDACIÓN
+Acceso inicial y enlaces directos comprobados visualmente en navegador.
+Transiciones de sesión, bloqueo al salir y navegación comprobados con simulación.
+JSON: formato, rechazo de datos inválidos y combinación sin duplicados comprobados.
+Excel generado y abierto con lectura de celdas numéricas.
+No se usaron credenciales ni se modificaron datos reales.
+El acceso autenticado en tu cuenta queda pendiente de tu comprobación.
+
+VERSIÓN 1.2: nombre Nesto y barras laterales con estilo común. Finanzas verde, patrimonio azul.
